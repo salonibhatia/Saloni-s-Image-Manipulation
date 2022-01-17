@@ -51,7 +51,8 @@ const manipulationDispatch = {
   "b":darkBlue,
   "q": darkRed,
   "g": grey,
-  "b":black
+  "b":black,
+
 
 
 
@@ -230,6 +231,20 @@ function neonGreen(){
       myImage.set( x, y, color(
         10-red(originalPixel),
         25-green(originalPixel),
+        31-blue(originalPixel)
+      ));
+        }
+        
+      }
+    }
+
+    function theOther(){
+    for (let y = 0; y < height; y++) {
+            for (let x = 0; x < width; x++) {
+           let originalPixel = myImage.get(x,y);
+      myImage.set( x, y, color(
+        60-red(originalPixel),
+        75-green(originalPixel),
         31-blue(originalPixel)
       ));
         }
